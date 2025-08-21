@@ -1,5 +1,9 @@
+import sys
 from pathlib import Path
 
 ROOT_PATH = Path(__file__).parent
-IMG_PATH = ROOT_PATH / 'src' / 'img'
-DATA_FILE = ROOT_PATH / 'src' / 'data' / 'tasks.json'
+SRC_PATH = ROOT_PATH / 'src'
+IMG_PATH = SRC_PATH / 'img'
+DATA_FILE = SRC_PATH / 'data' / 'tasks.json'
+PYTHON_PATH = Path(sys.executable).parent
+PYINSTALLER_PATH = PYTHON_PATH / 'pyinstaller'
