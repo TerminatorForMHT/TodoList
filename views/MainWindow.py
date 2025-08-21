@@ -53,7 +53,7 @@ class MainWindow(BackgroundAnimationWidget, FramelessWindow):
         self.titleBar.setTitle('Fluent ToDo List')
         self.titleBar.setIcon(str(IMG_PATH / 'todo.svg'))
         self.titleBar.setContentsMargins(15, 0, 0, 0)
-        self.setWindowIcon(QIcon(str(IMG_PATH / 'todo.svg')))
+        self.setWindowIcon(QIcon(str(IMG_PATH / 'todo.ico')))
 
         # 绑定伪最大化（按钮）
         self.titleBar.maxBtn.clicked.disconnect()
