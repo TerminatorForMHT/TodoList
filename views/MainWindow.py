@@ -18,7 +18,6 @@ from qfluentwidgets.window.fluent_window import FluentTitleBar
 
 from config import IMG_PATH, DATA_FILE
 from views.AddTaskBox import AddTaskBox
-from views.LineListWidget import LineListWidget
 from views.TodoItemWidget import TodoItemWidget
 
 
@@ -79,7 +78,7 @@ class MainWindow(BackgroundAnimationWidget, FramelessWindow):
         button_layout.setContentsMargins(10, 10, 0, 0)
 
         # 任务列表
-        self.task_list = LineListWidget(row_height=50)
+        self.task_list = ListWidget()
         self.task_list.setSelectionMode(QListWidget.SelectionMode.ExtendedSelection)
         self.task_list.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
         self.task_list.customContextMenuRequested.connect(self.show_context_menu)
