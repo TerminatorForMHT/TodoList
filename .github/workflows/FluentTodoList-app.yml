@@ -12,6 +12,8 @@ permissions:
 jobs:
   build:
     runs-on: windows-latest
+    env:
+      PYTHONUTF8: 1
 
     steps:
     - uses: actions/checkout@v4
@@ -29,4 +31,4 @@ jobs:
     - name: Build with PyInstaller
       run: |
         python package.py
-        ls dist/
+        dir dist/
