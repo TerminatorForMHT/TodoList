@@ -85,7 +85,7 @@ class TodoItemWidget(QWidget):
         if self.checkbox.isChecked():
             return
         current_time = QDateTime.currentDateTime()
-        remind_time = QDateTime(self.date_edit.date(), self.time_edit.time())   # ✅ 修复
+        remind_time = QDateTime(self.date_edit.date, self.time_edit.time)   # ✅ 修复
         repeat = self.repeat_combo.currentText()
         if current_time >= remind_time and not self.notified:
             tray_icon.showMessage(
